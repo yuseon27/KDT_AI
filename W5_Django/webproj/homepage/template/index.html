@@ -1,13 +1,30 @@
 <!DOCTYPE html> <!-- html5 -->
 <html>
-    <!-- head : html 파일에 대한 meta 정보, 뒤에서 볼 수 있는 정보 -->
+    {% comment %} head : html 파일에 대한 meta 정보, 뒤에서 볼 수 있는 정보 {% endcomment %}
     <head>
         <title>Python django example</title>
     </head>
 
-    <!-- body : html 구성 실제 요소, 사용자가 볼 수 있는 부분 -->
+    {% comment %} body : html 구성 실제 요소, 사용자가 볼 수 있는 부분 {% endcomment %}
+    {% comment %} {{}} 사용하여 Template 언어의 Template 변수 사용 {% endcomment %}
+
     <body>
         <h1>Title</h1>
         <p>blah blah blah</p>
+
+        {% comment %} Template Variable {% endcomment %}
+        <p>{{ my_num }}</p>   
+
+        {% comment %} Template Filter {% endcomment %}
+        <p>{{ my_name | length }}</p>
+        <p>{{ my_name | upper }}</p>
+
+        {% comment %} Template Tag {% endcomment %}
+        {% for elem in my_list %}
+            {% comment %} <p>{{ elem }}</p> {% endcomment %}
+            {% if not elem|divisibleby:"2" %}
+                <p>{{ elem }}</p>
+            {% endif %}
+        {% endfor %}
     </body>
 </html>
