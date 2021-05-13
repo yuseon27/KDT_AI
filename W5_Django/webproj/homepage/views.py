@@ -7,5 +7,5 @@ render(request, '.html', {})
 # Create your views here.
 def index(request) : #{
     # return HttpResponse("<h1>Hello World!</h1>")
-    render(request, 'index.html', {})
+    return render(request, 'index.html', {})
 #}
