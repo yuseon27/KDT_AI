@@ -43,9 +43,9 @@
 
 
 ## 3. 테스트 데이터 평가
-- Mean Absolute Error (MAE) : 
+- Mean Absolute Error (MAE) : 9.698449849055324
 $$MAE = {1 \over n}{\sum_{i=1}^{n}|f(x_i) - y_i|}$$
-- Under-prediction의 비율 : 
+- Under-prediction의 비율 : 0.21090581342947273
 $$UnderPrediction_Ratio = {under-prediction 개수 \over 데이터의 샘플수}$$
-- Mean Squared Error (MSE) : 
+- Mean Squared Error (MSE) : 13.109761615019222
 $$MAE = {1 \over n}{\sum_{i=1}^{n}(f(x_i) - y_i)^2}$$
