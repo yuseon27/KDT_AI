@@ -33,7 +33,6 @@
 - AverageCost : 대부분 정수, 'for'이라는 값을 갖고 있는 열이 있어 해당 값을 중간값으로 설정, 나머지를 정수로 변환. 이상값에 영향을 덜 받는 RobustScaler 적용
 - Rating      : 대부분 실수, ['NEW', 'Opening Soon', 'Temporarily Closed']를 가지고 있는 열에 대해 0으로 설정, 나머지는 실수로 변환
 
-<br>
 
 ### (2) 숫자형 필드
 - MinimumOrder : 정수(Int)  , StandardScaler 적용
@@ -41,12 +40,11 @@
 - Reviews      : 실수(Float), StandardScaler 적용
 - DeliveryTime : 정수(Int)
 
-<br>
 
 ### (3) 결측치 존재 필드
 - AverageCost            : 중간값으로 설정 
 - Rating, Votes, Reviews : 손님들의 평가가 존재하지 않으므로 0으로 설정
-- 
+
 <br>
 <br>
 
@@ -62,8 +60,14 @@
 
 ## 3. 테스트 데이터 평가
 - Mean Absolute Error (MAE) : 9.698449849055324  
-$$ MAE = {1 \over n}{\sum_{i=1}^{n}|f(x_i) - y_i|} $$
+$ \begin
+MAE = {1 \over n}{\sum_{i=1}^{n}|f(x_i) - y_i|}
+\end $
 - Under-prediction의 비율 : 0.21090581342947273  
-$$ UnderPrediction_Ratio = {under-prediction 개수 \over 데이터의 샘플수} $$
+$ \begin
+UnderPrediction_Ratio = {under-prediction 개수 \over 데이터의 샘플수}
+\end $
 - Mean Squared Error (MSE) : 13.109761615019222  
-$$ MAE = {1 \over n}{\sum_{i=1}^{n}(f(x_i) - y_i)^2} $$
+$ \begin
+MAE = {1 \over n}{\sum_{i=1}^{n}(f(x_i) - y_i)^2}
+\end $
